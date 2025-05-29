@@ -1,2 +1,43 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私の最初のホームページ</title>
+    <style>
+        /* ここからCSS */
+        body {
+            background-color: #e0f7fa; /* 背景色: 薄い青色 */
+            color: #333333;          /* 文字色: 濃い灰色 */
+            font-family: sans-serif;  /* フォントの種類 (任意) */
+            margin: 20px;             /* ページ全体の余白 (任意) */
+        }
+
+        h1 {
+            border-bottom: 2px solid #00796b; /* 見出しの下線 (任意) */
+            padding-bottom: 10px;           /* 見出しと下線の間の余白 (任意) */
+        }
+
+        ul {
+            list-style-type: disc; /* リストのマーカーの種類 (任意) */
+        }
+        /* ここまでCSS */
+    </style>
+</head>
+<body>
+
+    <h1>ようこそ!</h1>
+
+    <p><strong>名前:</strong> [自分の名前に置き換える]</p>
+    <p><strong>学部学科:</strong> [自分の学部学科に置き換える]</p>
+    <p><strong>趣味:</strong></p>
+    <ul>
+        <li>[趣味1 例: 読書]</li>
+        <li>[趣味2 例: 映画鑑賞]</li>
+        <li>[趣味3 例: 旅行]</li> {/* 趣味が2つの場合はこの行を削除してもOK */}
+    </ul>
+
+    <p>これは私の最初のホームページです。これからHTMLとCSSを学んで、もっと素敵なページを作れるようになりたいです。</p>
+
+</body>
+</html>
