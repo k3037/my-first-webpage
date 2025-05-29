@@ -3,41 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>私の最初のホームページ</title>
+    <title>私のホームページ</title>
     <style>
         /* ここからCSS */
         body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', sans-serif; /* 共通フォント */
+            margin: 0; /* bodyのデフォルトマージンをリセット */
+            padding: 0; /* bodyのデフォルトパディングをリセット */
+            line-height: 1.6; /* 全体の行間を少し広めに */
+        }
+
+        /* --- 自己紹介セクションのスタイル --- */
+        #profile-section {
             background-color: #e0f7fa; /* 背景色: 薄い青色 */
             color: #333333;          /* 文字色: 濃い灰色 */
-            font-family: sans-serif;  /* フォントの種類 (任意) */
-            margin: 20px;             /* ページ全体の余白 (任意) */
+            padding: 30px 20px;     /* 上下の余白を多めに、左右は少し */
+            text-align: center; /* 中央寄せで見やすく */
         }
 
-        h1 {
-            border-bottom: 2px solid #00796b; /* 見出しの下線 (任意) */
-            padding-bottom: 10px;           /* 見出しと下線の間の余白 (任意) */
+        #profile-section h1 {
+            color: #00796b; /* 見出しの色を静岡の緑と合わせて統一感を出す (任意) */
+            border-bottom: 2px solid #004d40;
+            padding-bottom: 10px;
+            display: inline-block; /* 下線が文字幅に合うように */
+            margin-bottom: 20px;
         }
 
-        ul {
-            list-style-type: disc; /* リストのマーカーの種類 (任意) */
+        #profile-section p {
+            margin-bottom: 10px;
+            max-width: 600px; /* 長文にならないように最大幅を設定 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #profile-section ul {
+            list-style-type: disc;
+            padding-left: 40px; /* リストのインデント */
+            display: inline-block; /* 中央寄せのため */
+            text-align: left; /* リスト項目は左寄せ */
+            margin-bottom: 20px;
+        }
+
+        #profile-section .intro-message {
+            font-style: italic;
+            color: #555555;
+        }
+
+        /* --- 静岡観光スポットセクションのスタイル --- */
+        #shizuoka-section {
+            background-color: #f0fff0; /* 背景色: 薄い緑 (ハニーデューのような色) */
+            color: #263238;          /* 文字色: 濃い青灰色 */
+            padding: 30px 0;        /* 上下の余白 */
+        }
+
+        #shizuoka-section .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto; /* 上下マージンはセクションのpaddingで制御、左右中央寄せ */
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #shizuoka-section h1 { /* セクションタイトルとしてのH1 */
+            color: #00796b;
+            text-align: center;
+            border-bottom: 3px solid #004d40;
+            padding-bottom: 15px;
+            margin-top: 0; /* コンテナ内の最初の要素なので上マージンは不要 */
+            margin-bottom: 30px;
+        }
+
+        #shizuoka-section h2 { /* スポットの見出しとしてのH2 (旧H3を格上げ) */
+            color: #00796b;
+            border-left: 5px solid #004d40;
+            padding-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        #shizuoka-section .spot {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #b2dfdb;
+            border-radius: 5px;
+            background-color: #f4f8f7;
+        }
+
+        #shizuoka-section .spot p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        #shizuoka-section .spot .area-tag {
+            display: inline-block;
+            background-color: #00796b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        #shizuoka-section .intro-text,
+        #shizuoka-section .outro-text {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            color: #37474f;
         }
         /* ここまでCSS */
     </style>
 </head>
 <body>
 
-    <h1>ようこそ!</h1>
+    <!-- 自己紹介セクション -->
+    <div id="profile-section">
+        <h1>ようこそ!</h1>
 
-    <p><strong>学部：かな</strong> </p>
-    <p><strong>学科：情報</strong> </p>
-    <p><strong>趣味</strong></p>
-    <ul>
-        <li>[趣味1 : 読書]</li>
-        <li>[趣味2 : 映画鑑賞]</li>
-        <li>[趣味3 : 旅行]</li> 
-    </ul>
+        <p><strong>名前:</strong> [自分の名前に置き換える]</p>
+        <p><strong>学部学科:</strong> [自分の学部学科に置き換える]</p>
+        <p><strong>趣味:</strong></p>
+        <ul>
+            <li>[趣味1 例: 読書]</li>
+            <li>[趣味2 例: 映画鑑賞]</li>
+            <li>[趣味3 例: 旅行]</li>
+        </ul>
+        <p class="intro-message">これは私の最初のホームページです。HTMLとCSSを学んで、もっと素敵なページを作れるようになりたいです。</p>
+    </div>
 
-    <p>これは私の最初のホームページです。これからHTMLとCSSを学んで、もっと素敵なページを作れるようになりたいです。</p>
+    <!-- 静岡観光スポットセクション -->
+    <div id="shizuoka-section">
+        <div class="container">
+            <h1>静岡の魅力発見！おすすめ観光スポット</h1>
+
+            <p class="intro-text">
+                豊かな自然と温暖な気候に恵まれた静岡県。世界遺産の富士山をはじめ、<br>
+                美しい海岸線、歴史ある温泉地、美味しいグルメなど、魅力あふれる観光スポットがたくさんあります。<br>
+                今回は、その中でも特におすすめの場所をいくつかご紹介します。
+            </p>
+
+            <div class="spot">
+                <span class="area-tag">富士山エリア / 東部</span>
+                <h2>富士山</h2> <!-- 元のH3からH2に変更 -->
+                <p>言わずと知れた日本の象徴であり、世界文化遺産にも登録されています。その雄大な姿は県内各地から望むことができ、季節や時間によって異なる表情を見せてくれます。登山はもちろん、五合目までのドライブや、富士山麓の観光スポット（白糸の滝、田貫湖など）からの眺望を楽しむのもおすすめです。</p>
+            </div>
+
+            <div class="spot">
+                <span class="area-tag">伊豆エリア</span>
+                <h2>伊豆半島</h2> <!-- 元のH3からH2に変更 -->
+                <p>美しい海岸線、豊富な温泉、海の幸が楽しめる人気の観光地です。熱海温泉や修善寺温泉などの温泉街、城ヶ崎海岸の断崖絶壁、下田の白い砂浜など、エリアごとに多彩な魅力があります。季節の花々が楽しめる公園も多く、ドライブにも最適です。</p>
+            </div>
+
+            <div class="spot">
+                <span class="area-tag">中部エリア</span>
+                <h2>三保の松原</h2> <!-- 元のH3からH2に変更 -->
+                <p>羽衣伝説の舞台としても知られ、世界文化遺産「富士山-信仰の対象と芸術の源泉」の構成資産の一つです。約7kmにわたる海岸に約3万本の松が茂り、駿河湾越しに望む富士山の景色は「日本新三景」にも数えられる絶景です。レンタサイクルで松林を散策するのも気持ちが良いです。</p>
+            </div>
+
+            <div class="spot">
+                <span class="area-tag">西部エリア</span>
+                <h2>浜名湖</h2> <!-- 元のH3からH2に変更 -->
+                <p>静岡県西部にある日本で10番目に大きい湖で、汽水湖（海水と淡水が混じり合う湖）です。うなぎの養殖で有名ですが、舘山寺温泉、浜名湖パルパル（遊園地）、フラワーパーク、遊覧船でのクルージング、サイクリングロードなど、家族連れでも楽しめるレジャースポットが充実しています。</p>
+            </div>
+
+            <div class="spot">
+                <span class="area-tag">中部エリア / 奥静岡</span>
+                <h2>寸又峡「夢の吊橋」</h2> <!-- 元のH3からH2に変更 -->
+                <p>南アルプスの麓、大井川上流の渓谷「寸又峡」にある、エメラルドグリーンの湖面にかかる美しい吊り橋です。一度に渡れる人数が制限されており、スリル満点。特に紅葉の時期は、周囲の山々の色彩と湖面のコントラストが見事です。周辺には温泉や遊歩道もあります。</p>
+            </div>
+
+            <p class="outro-text">
+                これらのスポット以外にも、静岡県にはまだまだたくさんの魅力が隠されています。<br>
+                ぜひ一度訪れて、あなただけのお気に入りを見つけてみてくださいね！
+            </p>
+        </div>
+    </div>
 
 </body>
 </html>
